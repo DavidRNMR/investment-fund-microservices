@@ -1,4 +1,4 @@
-package com.investmentfund.gateway;
+package com.investmentfund.service.gateway;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -18,12 +18,13 @@ spring:
           enabled: true
       routes:
         - id: user-service
-          uri: lb//user-service
+          uri: lb://user-service
           predicates:
             - Path=/user/**
           filters:
+            - RewritePath=/user/(?<path>.*), /$\{path}
         - id: wallet-service
-          uri: lb//wallet-service
+          uri: lb://wallet-service
           predicates:
             - Path=/wallet/**
           filters:

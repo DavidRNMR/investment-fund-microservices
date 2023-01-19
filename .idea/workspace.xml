@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/gateway.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/proxy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/java/com/investmentfund/service/discovery/DiscoveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/investmentfund/gateway/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/UserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="working on user service.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/user-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/config/discovery-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/discovery-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/config/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/gateway-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/investmentfund/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/investmentfund/service/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +51,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17"
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/david/Desktop/investment-fund-microservices",
+    "spring.configuration.checksum": "ed604198a1f72444619e34b9b6af9ba1"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="ConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.config.ConfigurationApplication" />
@@ -87,12 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <option name="ACTIVE_PROFILES" />
       <module name="gateway-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.gateway.GatewayApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.gateway.GatewayApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.investmentfund.gateway.*" />
+          <option name="PATTERN" value="com.investmentfund.service.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigurationApplication" />
       </list>
@@ -130,7 +127,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674124108518</updated>
-      <workItem from="1674124110958" duration="4630000" />
+      <workItem from="1674124110958" duration="12030000" />
+      <workItem from="1674153405906" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1674125517029</created>
@@ -139,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674125517029</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working on user service.">
+      <created>1674128856316</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674128856316</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="working on user service." />
+    <option name="LAST_COMMIT_MESSAGE" value="working on user service." />
   </component>
 </project>

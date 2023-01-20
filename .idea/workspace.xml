@@ -4,16 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="fixed some problems on config service">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" afterDir="false" />
+    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="working on wallet service">
+      <change afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/wallet-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/WalletApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/controller/WalletController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/WalletDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/entity/WalletEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/enums/WalletStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/exceptions/WalletNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/mapper/WalletMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/repository/WalletRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -111,12 +127,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WalletApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="wallet-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.wallet.WalletApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.investmentfund.service.wallet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.WalletApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigurationApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +161,7 @@
       <workItem from="1674124110958" duration="12030000" />
       <workItem from="1674153405906" duration="1877000" />
       <workItem from="1674198648433" duration="6000" />
-      <workItem from="1674201365043" duration="6147000" />
+      <workItem from="1674201365043" duration="19832000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1674125517029</created>
@@ -154,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674155254556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working on wallet service">
+      <created>1674207734182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674207734182</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +212,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="working on user service." />
     <MESSAGE value="fixed some problems on config service" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some problems on config service" />
+    <MESSAGE value="working on wallet service" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on wallet service" />
   </component>
 </project>

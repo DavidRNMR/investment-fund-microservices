@@ -2,8 +2,11 @@ package com.investmentfund.service.user.service;
 
 import com.investmentfund.service.user.dto.UserDto;
 import com.investmentfund.service.user.exceptions.UserNotFoundException;
+import com.investmentfund.service.user.feign.WalletClient;
 import com.investmentfund.service.user.mapper.UserMapper;
+import com.investmentfund.service.user.models.Wallet;
 import com.investmentfund.service.user.models.entity.UserEntity;
+import com.investmentfund.service.user.models.entity.UserWallet;
 import com.investmentfund.service.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,6 +22,7 @@ public class UserServiceImpl implements UserService{
 
     private UserMapper mapper;
     private UserRepository repository;
+    private WalletClient client;
 
 
     @Override
@@ -59,5 +63,19 @@ public class UserServiceImpl implements UserService{
         UserEntity saved = repository.save(userEntity);
 
         return mapper.fromUser(saved);
+    }
+
+    @Override
+    public Wallet assignWallet(Wallet wallet, Long userId) throws UserNotFoundException {
+
+        UserEntity userEntity = repository.findById(userId).orElseThrow(()->new UserNotFoundException("user not found"));
+
+        Wallet wallet1 = client.findOneWallet(userEntity.getId());
+
+        UserWallet userWallet = new UserWallet();
+        userWallet.setUserId(wallet1.getId());
+
+
+        return null;
     }
 }

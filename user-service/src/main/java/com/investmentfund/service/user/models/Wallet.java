@@ -11,9 +11,4 @@ public class Wallet {
 
     private Long id;
     private Float balance;
-    private Long userId;
-
-    public Wallet (Long userId){
-        this.userId=userId;
-    }
 }

@@ -1,0 +1,8 @@
+package com.investmentfund.service.user.exceptions;
+
+public class UserNotFoundException extends Exception{
+
+    public UserNotFoundException (String message){
+        super (message);
+    }
+}

@@ -11,7 +11,7 @@ public interface WalletClient {
 
 
     @GetMapping("/wallets/{id}")
-    Wallet findOneWallet (@PathVariable Long id);
+    Wallet findOneWallet (@PathVariable Long walletId);
 
     @PostMapping("/wallet")
     Wallet addWallet (Wallet wallet);

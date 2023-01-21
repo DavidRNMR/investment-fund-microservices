@@ -11,9 +11,9 @@ import javax.validation.constraints.Email;
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Table(name="users")
+@NoArgsConstructor
 public class UserEntity {
 
     @Id
@@ -32,7 +32,4 @@ public class UserEntity {
     @Transient
     private Wallet wallet;
 
-    public void addUserWallet(UserWallet userWallet){
-        userWallet.s
-    }
 }

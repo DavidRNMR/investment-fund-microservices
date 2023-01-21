@@ -40,4 +40,10 @@ public class UserController {
     public void deleteOne (@PathVariable Long id){
         service.delete(id);
     }
+
+    @GetMapping("/users/getWallet/{id}/{walletId}")
+    public UserDto getUserWallet (@PathVariable Long id, @PathVariable Long walletId) throws  UserNotFoundException{
+
+        return service.findUserWallet(id,walletId);
+    }
 }

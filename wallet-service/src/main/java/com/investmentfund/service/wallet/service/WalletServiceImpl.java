@@ -28,6 +28,11 @@ public class WalletServiceImpl implements WalletService{
         WalletEntity walletEntity = mapper.fromWalletDto(walletDto);
         WalletEntity saved = repository.save(walletEntity);
 
+        if(saved.getBalance()>0){
+            saved.setStatus(WalletStatus.POSTIVE);
+        }else{
+            saved.setStatus(WalletStatus.INTHERED);
+        }
         return mapper.fromWallet(saved);
     }
 

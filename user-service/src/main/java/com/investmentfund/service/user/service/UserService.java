@@ -2,6 +2,7 @@ package com.investmentfund.service.user.service;
 
 import com.investmentfund.service.user.dto.UserDto;
 import com.investmentfund.service.user.exceptions.UserNotFoundException;
+import com.investmentfund.service.user.models.Wallet;
 
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface UserService {
     void delete(Long id);
     UserDto findOne(Long id) throws UserNotFoundException;
     UserDto updateUser (UserDto userDto);
-    UserDto findUserWallet (Long id, Long walletId) throws UserNotFoundException;
+    Wallet addWallet (Wallet wallet);
+    UserDto assignWallet (UserDto userDto,Long walletId);
 
 }

@@ -25,10 +25,6 @@ public class UserEntity {
     @Email
     private String email;
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinColumn(name="wallet_id")
-    private UserWallet userWallet;
-
     @Transient
     private Wallet wallet;
 

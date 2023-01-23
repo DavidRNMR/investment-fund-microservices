@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="starting with feign clients.">
+    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="assigning users &amp; wallets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +54,11 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/david/Desktop/curso-kubernetes",
+    "last_opened_file_path": "C:/Users/david/Desktop/cosas/Micro",
     "spring.configuration.checksum": "3033dd8b70812dda1a2811df0bb89574"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+  <component name="RunManager" selected="Spring Boot.UserApplication">
     <configuration name="ConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.config.ConfigurationApplication" />
@@ -124,9 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.WalletApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigurationApplication" />
       </list>
@@ -144,7 +147,10 @@
       <workItem from="1674153405906" duration="1877000" />
       <workItem from="1674198648433" duration="6000" />
       <workItem from="1674201365043" duration="20056000" />
-      <workItem from="1674328584078" duration="5502000" />
+      <workItem from="1674328584078" duration="5615000" />
+      <workItem from="1674381390668" duration="668000" />
+      <workItem from="1674410390618" duration="6034000" />
+      <workItem from="1674462336657" duration="10447000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1674125517029</created>
@@ -181,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674221897246</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="assigning users &amp; wallets">
+      <created>1674340068458</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674340068458</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +217,7 @@
     <MESSAGE value="fixed some problems on config service" />
     <MESSAGE value="working on wallet service" />
     <MESSAGE value="starting with feign clients." />
-    <option name="LAST_COMMIT_MESSAGE" value="starting with feign clients." />
+    <MESSAGE value="assigning users &amp; wallets" />
+    <option name="LAST_COMMIT_MESSAGE" value="assigning users &amp; wallets" />
   </component>
 </project>

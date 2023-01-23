@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface WalletClient {
 
 
-    @GetMapping("/wallets/{id}")
-    Wallet findOneWallet (@PathVariable Long walletId);
+    @GetMapping("/wallets/{walletId}")
+    Wallet findByWallet (@PathVariable Long walletId);
 
-    @PostMapping("/wallet")
+    @PostMapping("/wallets")
     Wallet addWallet (Wallet wallet);
 }

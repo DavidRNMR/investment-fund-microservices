@@ -4,6 +4,7 @@ import com.investmentfund.service.user.dto.UserDto;
 import com.investmentfund.service.user.exceptions.UserNotFoundException;
 import com.investmentfund.service.user.feign.WalletClient;
 import com.investmentfund.service.user.mapper.UserMapper;
+import com.investmentfund.service.user.models.Wallet;
 import com.investmentfund.service.user.models.entity.UserEntity;
 import com.investmentfund.service.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -64,14 +65,21 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserDto findUserWallet (Long id, Long walletId) throws UserNotFoundException {
-
-        UserEntity userEntity= repository.findById(id).orElseThrow(()-> new UserNotFoundException("user not found"));
-
-        userEntity.setWallet(client.findOneWallet(walletId));
-
-        return mapper.fromUser(userEntity);
+    public Wallet addWallet(Wallet wallet) {
+        return client.addWallet(wallet);
     }
 
+    @Override
+    public UserDto assignWallet(UserDto userDto, Long walletId) {
+
+        Wallet wallet = client.findByWallet(walletId);
+
+        UserEntity userEntity = mapper.fromUserDto(userDto);
+        UserEntity saved = repository.save(userEntity);
+
+        saved.setWallet(wallet);
+
+        return mapper.fromUser(saved);
+    }
 
 }

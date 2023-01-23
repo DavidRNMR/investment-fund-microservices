@@ -2,8 +2,10 @@ package com.investmentfund.service.user.controller;
 
 import com.investmentfund.service.user.dto.UserDto;
 import com.investmentfund.service.user.exceptions.UserNotFoundException;
+import com.investmentfund.service.user.models.Wallet;
 import com.investmentfund.service.user.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,9 +43,16 @@ public class UserController {
         service.delete(id);
     }
 
-    @GetMapping("/users/getWallet/{id}/{walletId}")
-    public UserDto getUserWallet (@PathVariable Long id, @PathVariable Long walletId) throws  UserNotFoundException{
+    @PostMapping("/users/wallets")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Wallet addWallet (@RequestBody Wallet wallet){
 
-        return service.findUserWallet(id,walletId);
+        return service.addWallet(wallet);
     }
+
+    @PostMapping("/users/wallets/{walletId}")
+    public UserDto assingWallet (@RequestBody UserDto userDto, @PathVariable Long walletId){
+        return service.assignWallet(userDto,walletId);
+    }
+
 }

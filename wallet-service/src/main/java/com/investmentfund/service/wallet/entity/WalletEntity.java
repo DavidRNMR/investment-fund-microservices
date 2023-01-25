@@ -21,4 +21,5 @@ public class WalletEntity {
 
     @Enumerated(EnumType.STRING)
     private WalletStatus status;
+    private Long userId;
 }

@@ -14,7 +14,6 @@ public interface UserService {
     void delete(Long id);
     UserDto findOne(Long id) throws UserNotFoundException;
     UserDto updateUser (UserDto userDto);
-    Wallet addWallet (Wallet wallet);
-    UserDto assignWallet (UserDto userDto,Long walletId);
+    Wallet assignWallet (Wallet wallet, Long userId) throws UserNotFoundException;
 
 }

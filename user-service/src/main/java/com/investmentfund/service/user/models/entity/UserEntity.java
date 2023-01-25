@@ -1,7 +1,7 @@
 package com.investmentfund.service.user.models.entity;
 
 
-import com.investmentfund.service.user.models.Wallet;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,7 +25,5 @@ public class UserEntity {
     @Email
     private String email;
 
-    @Transient
-    private Wallet wallet;
 
 }

@@ -5,7 +5,6 @@ import com.investmentfund.service.user.exceptions.UserNotFoundException;
 import com.investmentfund.service.user.models.Wallet;
 import com.investmentfund.service.user.service.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,22 +36,14 @@ public class UserController {
         userDto.setId(id);
         return service.updateUser(userDto);
     }
-
     @DeleteMapping("/users/{id}")
     public void deleteOne (@PathVariable Long id){
         service.delete(id);
     }
 
-    @PostMapping("/users/wallets")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Wallet addWallet (@RequestBody Wallet wallet){
-
-        return service.addWallet(wallet);
-    }
-
-    @PostMapping("/users/wallets/{walletId}")
-    public UserDto assingWallet (@RequestBody UserDto userDto, @PathVariable Long walletId){
-        return service.assignWallet(userDto,walletId);
+    @PostMapping("/users/addWallet/{userId}")
+    public Wallet addOneWallet (@RequestBody Wallet wallet, @PathVariable Long userId) throws UserNotFoundException {
+        return service.assignWallet(wallet,userId);
     }
 
 }

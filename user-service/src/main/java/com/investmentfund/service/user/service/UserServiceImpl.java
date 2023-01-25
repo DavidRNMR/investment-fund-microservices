@@ -51,8 +51,11 @@ public class UserServiceImpl implements UserService{
     public UserDto findOne(Long id) throws UserNotFoundException {
 
         UserEntity userEntity = repository.findById(id).orElseThrow(()-> new UserNotFoundException("user not found"));
+        UserDto userDto = mapper.fromUser(userEntity);
 
-        return mapper.fromUser(userEntity);
+        userDto.setWallet(client.findUserWallet(id));
+
+        return userDto;
     }
 
     @Override
@@ -65,21 +68,13 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Wallet addWallet(Wallet wallet) {
-        return client.addWallet(wallet);
+    public Wallet assignWallet (Wallet wallet, Long userId) throws UserNotFoundException {
+
+         UserEntity userEntity = repository.findById(userId).orElseThrow(()->new UserNotFoundException("user doesn't exist"));
+         UserDto userDto = mapper.fromUser(userEntity);
+
+         userDto.setWallet(client.addWallet(wallet));
+
+        return wallet;
     }
-
-    @Override
-    public UserDto assignWallet(UserDto userDto, Long walletId) {
-
-        Wallet wallet = client.findByWallet(walletId);
-
-        UserEntity userEntity = mapper.fromUserDto(userDto);
-        UserEntity saved = repository.save(userEntity);
-
-        saved.setWallet(wallet);
-
-        return mapper.fromUser(saved);
-    }
-
 }

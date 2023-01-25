@@ -12,4 +12,5 @@ public class UserDto implements Serializable {
     private String name;
     private String email;
     private Wallet wallet;
+
 }

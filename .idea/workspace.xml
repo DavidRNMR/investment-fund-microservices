@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="assigning users &amp; wallets">
+    <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="problems with users wallets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserWallet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/controller/WalletController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/WalletDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/WalletDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/entity/WalletEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/entity/WalletEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/repository/WalletRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/repository/WalletRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/david/Desktop/cosas/Micro",
+    "last_opened_file_path": "C:/Users/david/Desktop/cosas/tienda-motos",
     "spring.configuration.checksum": "3033dd8b70812dda1a2811df0bb89574"
   }
 }]]></component>
@@ -150,7 +156,10 @@
       <workItem from="1674328584078" duration="5615000" />
       <workItem from="1674381390668" duration="668000" />
       <workItem from="1674410390618" duration="6034000" />
-      <workItem from="1674462336657" duration="10447000" />
+      <workItem from="1674462336657" duration="11884000" />
+      <workItem from="1674487647607" duration="4194000" />
+      <workItem from="1674494176337" duration="939000" />
+      <workItem from="1674635810712" duration="9567000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1674125517029</created>
@@ -194,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674340068458</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="problems with users wallets">
+      <created>1674475586641</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674475586641</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +234,7 @@
     <MESSAGE value="working on wallet service" />
     <MESSAGE value="starting with feign clients." />
     <MESSAGE value="assigning users &amp; wallets" />
-    <option name="LAST_COMMIT_MESSAGE" value="assigning users &amp; wallets" />
+    <MESSAGE value="problems with users wallets" />
+    <option name="LAST_COMMIT_MESSAGE" value="problems with users wallets" />
   </component>
 </project>

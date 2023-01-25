@@ -67,6 +67,14 @@ public class WalletServiceImpl implements WalletService{
     }
 
     @Override
+    public WalletDto findByUser(Long userId) {
+
+        WalletEntity walletEntity = repository.findByUserId(userId);
+
+        return mapper.fromWallet(walletEntity);
+    }
+
+    @Override
     public void transfer(Long id, Float amount) throws WalletNotFoundException {
 
         WalletEntity walletEntity = repository.findById(id).orElseThrow(()-> new WalletNotFoundException("wallet not found"));

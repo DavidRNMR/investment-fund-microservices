@@ -11,4 +11,6 @@ public class Wallet {
 
     private Long id;
     private Float balance;
+    private Long userId;
+
 }

@@ -40,4 +40,8 @@ public class WalletController {
         walletDto.setId(id);
         return service.updateOne(walletDto);
     }
+    @GetMapping("/walletByUser/{userId}")
+    public WalletDto findByUser (@PathVariable Long userId ){
+        return service.findByUser(userId);
+    }
 }

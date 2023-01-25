@@ -11,4 +11,5 @@ public class WalletDto implements Serializable {
     private Long id;
     private Float balance;
     private WalletStatus walletStatus;
+    private Long userId;
 }

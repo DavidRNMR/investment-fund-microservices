@@ -29,3 +29,9 @@ spring:
             - Path=/wallet/**
           filters:
             - RewritePath=/wallet/(?<path>.*), /%\{path}
+        - id: fund-service
+          uri: lb://fund-service
+          predicates:
+            - Path=/fund/**
+          filters:
+            - RewritePath=/wallet/(?<path>.*), /%\{path}

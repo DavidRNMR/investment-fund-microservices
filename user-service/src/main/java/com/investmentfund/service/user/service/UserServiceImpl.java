@@ -38,6 +38,7 @@ public class UserServiceImpl implements UserService{
 
         List<UserEntity> userEntities = repository.findAll();
 
+
         return userEntities.stream().map(user->mapper.fromUser(user)).collect(Collectors.toList());
     }
 

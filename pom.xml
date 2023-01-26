@@ -22,6 +22,7 @@
         <module>gateway-service</module>
         <module>user-service</module>
         <module>wallet-service</module>
+        <module>fund-service</module>
     </modules>
 
 </project>

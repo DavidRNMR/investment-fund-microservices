@@ -21,5 +21,7 @@ public class WalletEntity {
 
     @Enumerated(EnumType.STRING)
     private WalletStatus status;
+
+    @Column(unique = true)
     private Long userId;
 }

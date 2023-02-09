@@ -1,4 +1,4 @@
-package com.investmentfund.service.user.models.entity;
+package com.investmentfund.service.user.entity;
 
 
 

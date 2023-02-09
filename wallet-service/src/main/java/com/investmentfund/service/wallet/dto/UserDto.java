@@ -1,4 +1,4 @@
-package com.investmentfund.service.user.dto;
+package com.investmentfund.service.wallet.dto;
 
 import lombok.Data;
 
@@ -10,5 +10,4 @@ public class UserDto implements Serializable {
     private Long id;
     private String name;
     private String email;
-
 }

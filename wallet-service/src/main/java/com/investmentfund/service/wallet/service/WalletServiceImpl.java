@@ -1,9 +1,11 @@
 package com.investmentfund.service.wallet.service;
 
+import com.investmentfund.service.wallet.dto.UserDto;
 import com.investmentfund.service.wallet.dto.WalletDto;
 import com.investmentfund.service.wallet.entity.WalletEntity;
 import com.investmentfund.service.wallet.enums.WalletStatus;
 import com.investmentfund.service.wallet.exceptions.WalletNotFoundException;
+import com.investmentfund.service.wallet.feign.UserClient;
 import com.investmentfund.service.wallet.mapper.WalletMapper;
 import com.investmentfund.service.wallet.repository.WalletRepository;
 import lombok.AllArgsConstructor;
@@ -20,6 +22,7 @@ public class WalletServiceImpl implements WalletService{
 
     private WalletMapper mapper;
     private WalletRepository repository;
+    private UserClient client;
 
 
     @Override
@@ -41,7 +44,15 @@ public class WalletServiceImpl implements WalletService{
 
         WalletEntity walletEntity = repository.findById(id).orElseThrow(()->new WalletNotFoundException("wallet not found"));
 
-        return mapper.fromWallet(walletEntity);
+        UserDto userDto = client.findUserById(walletEntity.getUserId());
+
+        WalletDto walletDto = WalletDto.builder()
+                .id(walletEntity.getId())
+                .balance(walletEntity.getBalance())
+                .userId(userDto.getId())
+                .build();
+
+        return walletDto;
     }
 
     @Override
@@ -74,18 +85,4 @@ public class WalletServiceImpl implements WalletService{
         return mapper.fromWallet(walletEntity);
     }
 
-    @Override
-    public void transfer(Long id, Float amount) throws WalletNotFoundException {
-
-        WalletEntity walletEntity = repository.findById(id).orElseThrow(()-> new WalletNotFoundException("wallet not found"));
-
-        walletEntity.setBalance(walletEntity.getBalance()-amount);
-
-        if(walletEntity.getBalance()<amount){
-
-            walletEntity.setStatus(WalletStatus.INTHERED);
-        }else{
-            walletEntity.setStatus(WalletStatus.POSTIVE);
-        }
-    }
 }

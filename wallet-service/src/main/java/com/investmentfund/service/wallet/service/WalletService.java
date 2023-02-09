@@ -13,6 +13,6 @@ public interface WalletService {
     List<WalletDto> findAllWallets();
     WalletDto updateOne(WalletDto walletDto);
     WalletDto findByUser (Long userId);
-    void transfer(Long id, Float amount) throws WalletNotFoundException;
+
 
 }

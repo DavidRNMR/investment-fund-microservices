@@ -5,28 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b7646-33b7-4f17-afd2-3fdc5e4c5d5f" name="Changes" comment="assigned wallets to users">
-      <change afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/fund-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/FundApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/dto/FundDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/entity/FundEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/enums/FundType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/exceptions/FundNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/mapper/FundMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/repository/FundRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/service/FundService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/java/com/investmentfund/service/fund/service/FundServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fund-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/feign/UserClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/config/gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/gateway-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/config/proxy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/config/proxy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/feign/WalletClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/models/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/entity/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/investmentfund/service/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/WalletDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/dto/WalletDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/entity/WalletEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/entity/WalletEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/investmentfund/service/wallet/service/WalletServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,22 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/david/Desktop/cosas/bank",
-    "spring.configuration.checksum": "3033dd8b70812dda1a2811df0bb89574"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/Desktop/cosas/bank&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3033dd8b70812dda1a2811df0bb89574&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.FundApplication">
+}</component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="ConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.config.ConfigurationApplication" />
@@ -111,6 +105,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.investmentfund.service.user.UserApplication" />
@@ -139,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.FundApplication" />
+        <item itemvalue="Spring Boot.WalletApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigurationApplication" />
-        <item itemvalue="Spring Boot.UserApplication" />
-        <item itemvalue="Spring Boot.WalletApplication" />
+        <item itemvalue="Spring Boot.FundApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -167,6 +168,7 @@
       <workItem from="1674494176337" duration="939000" />
       <workItem from="1674635810712" duration="14748000" />
       <workItem from="1674724240074" duration="6154000" />
+      <workItem from="1675942689886" duration="3272000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1674125517029</created>

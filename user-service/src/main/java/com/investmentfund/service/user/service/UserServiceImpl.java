@@ -2,10 +2,8 @@ package com.investmentfund.service.user.service;
 
 import com.investmentfund.service.user.dto.UserDto;
 import com.investmentfund.service.user.exceptions.UserNotFoundException;
-import com.investmentfund.service.user.feign.WalletClient;
 import com.investmentfund.service.user.mapper.UserMapper;
-import com.investmentfund.service.user.models.Wallet;
-import com.investmentfund.service.user.models.entity.UserEntity;
+import com.investmentfund.service.user.entity.UserEntity;
 import com.investmentfund.service.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,7 +19,6 @@ public class UserServiceImpl implements UserService{
 
     private UserMapper mapper;
     private UserRepository repository;
-    private WalletClient client;
 
 
     @Override
@@ -52,11 +49,8 @@ public class UserServiceImpl implements UserService{
     public UserDto findOne(Long id) throws UserNotFoundException {
 
         UserEntity userEntity = repository.findById(id).orElseThrow(()-> new UserNotFoundException("user not found"));
-        UserDto userDto = mapper.fromUser(userEntity);
 
-        userDto.setWallet(client.findUserWallet(id));
-
-        return userDto;
+        return mapper.fromUser(userEntity);
     }
 
     @Override
@@ -68,14 +62,4 @@ public class UserServiceImpl implements UserService{
         return mapper.fromUser(saved);
     }
 
-    @Override
-    public Wallet assignWallet (Wallet wallet, Long userId) throws UserNotFoundException {
-
-         UserEntity userEntity = repository.findById(userId).orElseThrow(()->new UserNotFoundException("user doesn't exist"));
-         UserDto userDto = mapper.fromUser(userEntity);
-
-         userDto.setWallet(client.addWallet(wallet));
-
-        return wallet;
-    }
 }

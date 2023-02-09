@@ -1,7 +1,7 @@
 package com.investmentfund.service.user.mapper;
 
 import com.investmentfund.service.user.dto.UserDto;
-import com.investmentfund.service.user.models.entity.UserEntity;
+import com.investmentfund.service.user.entity.UserEntity;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
